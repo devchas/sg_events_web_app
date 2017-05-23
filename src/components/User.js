@@ -8,9 +8,12 @@ class User extends Component {
 
   render() {
     const { email } = this.props;
+    const { selected } = this.state;
+
+    const majorClass = (selected) ? "major-item selected" : "major-item";    
 
     return (
-      <div className="major-item">
+      <div className={majorClass} onClick={() => this.setState({ selected: !selected })}>
         <div><b>User:</b> {email}</div>
       </div>
     );

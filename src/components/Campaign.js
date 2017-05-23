@@ -9,9 +9,12 @@ class Campaign extends Component {
   render() {
     // console.log(this.props);
     const { name } = this.props;
+    const { selected } = this.state;
+
+    const majorClass = (selected) ? "major-item selected" : "major-item";
 
     return (
-      <div className="major-item">
+      <div className={majorClass} onClick={() => this.setState({ selected: !selected })}>
         <div><b>Campaign Name:</b> {name}</div>
       </div>
     );

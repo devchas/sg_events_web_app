@@ -3,6 +3,10 @@
   padding: 20px;
 }
 
+.major-item.selected {
+  background-color: gray;
+}
+
 .major-item:hover {
   background-color: gray;
 }

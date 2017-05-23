@@ -11,13 +11,15 @@ class Event extends Component {
     // console.log(this.props);
 
     const { id, eventType, url, timestamp, user, campaign } = this.props;
+    const { selected } = this.state;
 
+    const majorClass = (selected) ? "major-item selected" : "major-item";
     const userEmail = (user) ? user.email : 'User';
     const link = (url) ? `(${url})` : '';
     const campaignName = (campaign) ? campaign.name : 'None';
 
     return (
-      <div className="major-item">
+      <div className={majorClass} onClick={() => this.setState({ selected: !selected })}>
         <div><b>User:</b> {userEmail}</div>
         <div><b>Event:</b> {eventType.toUpperCase()} {link}</div>
         <div><b>At:</b> {timestamp}</div>
