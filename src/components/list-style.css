@@ -4,9 +4,20 @@
 }
 
 .major-item.selected {
-  background-color: gray;
+  /*background-color: gray;*/
 }
 
 .major-item:hover {
-  background-color: gray;
+  /*background-color: gray;*/
+}
+
+.level-2-container {
+  padding: 10px;
+}
+
+.level-2-title {
+  font-weight: bold;
+  padding: 5px;
+  background-color: #cccccc;
+  border: 1px solid gray;
 }

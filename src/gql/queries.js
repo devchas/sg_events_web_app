@@ -96,7 +96,7 @@ export const userByEventByCampaign = gql`query UserByEventByCampaign($userId:Int
   }
 }`;
 
-export const eventByUserByCampagin = gql`query EventByUserByCampaign($eventId:Int!, $userId:Int!){
+export const eventUserCampaigns = gql`query EventByUserByCampaign($eventId:Int!, $userId:Int!){
   event(id:$eventId) {
     id
     eventType
